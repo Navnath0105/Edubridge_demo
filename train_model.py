@@ -11,7 +11,6 @@ os.makedirs('data', exist_ok=True)
 os.makedirs('models', exist_ok=True)
 
 # 2. Create a Mock Dataset
-# In a real project, this would be thousands of rows from Kaggle or your own surveys.
 data = {
     'Degree': ['B.Tech CS', 'B.Tech CS', 'BCA', 'B.Sc Stats', 'BBA', 'B.Tech IT', 'B.Tech Mech', 'B.Com'],
     'Primary_Skill': ['Python', 'Java', 'HTML/CSS', 'Python', 'Marketing', 'SQL', 'AutoCAD', 'Accounting'],
@@ -27,7 +26,6 @@ df.to_csv('data/career_dataset.csv', index=False)
 print("✅ Mock dataset saved to data/career_dataset.csv")
 
 # 3. Preprocess the Data (Machine Learning models only understand numbers)
-# We will use LabelEncoders to convert text like "Python" into numbers like "1"
 encoders = {}
 for column in ['Degree', 'Primary_Skill', 'Interest']:
     encoders[column] = LabelEncoder()
