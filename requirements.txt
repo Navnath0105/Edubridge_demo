@@ -4,4 +4,4 @@ numpy
 scikit-learn
 plotly
 joblib
-google-generativeai  # Or openai, depending on which LLM you prefer
+google-generativeai  
